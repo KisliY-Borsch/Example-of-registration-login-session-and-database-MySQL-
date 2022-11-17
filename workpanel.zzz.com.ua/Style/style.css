@@ -1,0 +1,418 @@
+/*Адаптивный топбар*/
+@media (max-width: 1000px){
+	.topbar{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+  td.appD{
+  text-overflow: ellipsis;
+  }
+}
+
+/*Добавил свой шрифт, вызываемый по имени*/
+@font-face {
+	font-family: Raleway;
+	src: url(Raleway-Regular.ttf);
+}
+
+/*Убрал скрол*/
+html {
+	overflow:  hidden;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: Raleway;
+}
+
+/*Меню навигации*/
+.topbar {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background: linear-gradient(to bottom right, #FCAF45, #833AB4);
+  overflow: visible;
+}
+
+.topbar a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: Raleway, italic;
+
+}
+
+.topbar a:hover {
+    background-color: #f1f1f1;
+    opacity: 0.5;
+    color: black;
+}
+
+.topbar a.active {
+    background-color: #f1f1f1;
+    opacity: 0.5;
+    color: black;
+}
+
+/*Кнопка в меню навигации с выпадающим списком*/
+.dropbtn {
+  background-color: none;
+  background: transparent;
+  color: white;
+  padding: 14px 16px;
+  font-size: 20px;
+  font-family: Raleway;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: Raleway;
+  font-size: 20px;
+}
+
+.dropdown-content a:hover {
+	background-color: #ddd;
+	color: black;
+  opacity: 1;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: #ddd;
+	opacity: 0.5;
+	color: black;
+}
+
+/*Поиск абонента*/
+input[name=search] {
+  width: 200px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: Raleway;
+  background-color: white;
+  background-image: url(Images/searchicon.png);
+  background-position: left; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 10px 40px;
+  border-radius: 25px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+input[name=search]:focus {
+  width: 300px;
+}
+
+body.backlog{
+  background: linear-gradient(to bottom right, #FCAF45, #833AB4);
+}
+
+input#regbtn{
+  background-color: #f1f1f1;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Raleway;
+}
+
+input#loginbtn{
+  background-color: #f1f1f1;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Raleway;
+}
+
+.content{
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: vertical;
+  text-align: center;
+}
+
+textarea#AppDesc{
+  resize: none;
+}
+
+table.waitApl{
+  width: 100%;
+  overflow-x: auto;
+  word-break: break-word;
+}				
+
+.divLogForm{
+  display: block;
+  font-size: 16px;
+  padding: 50px;
+  text-align: center;
+  text-decoration: none;
+  position: fixed; top: 50%; left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.divRegForm{
+  display: none;
+  font-size: 16px;
+  padding: 50px;
+/*  text-align: center;*/
+  text-decoration: none;
+  position: fixed; top: 50%; left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+input#loginReg{
+  width: 250px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  font-family: Raleway;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 12px 20px 10px;
+  border-radius: 25px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+input#login{
+  width: 250px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  font-family: Raleway;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 12px 20px 10px;
+  border-radius: 25px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+input#password1{
+  width: 250px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  font-family: Raleway;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 12px 20px 10px;
+  border-radius: 25px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+input#password1Reg{
+  width: 250px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  font-family: Raleway;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 12px 20px 10px;
+  border-radius: 25px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+input#password2Reg{
+  border-color: none;
+  width: 250px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  font-family: Raleway;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 12px 20px 10px;
+  border-radius: 25px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+input#userEmailReg{
+  width: 250px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  font-family: Raleway;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 12px 20px 10px;
+  border-radius: 25px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+input#userNameReg{
+  width: 250px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  font-family: Raleway;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 12px 20px 10px;
+  border-radius: 25px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+input#userSurnameReg{
+  width: 250px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  font-family: Raleway;
+  background-color: white;
+  background-repeat: no-repeat;
+  padding: 12px 20px 10px;
+  border-radius: 25px;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/*input#password1:focus{
+  width: 270px;
+}
+
+input#login:focus{
+  width: 270px;
+}
+
+input#password2:focus{
+  width: 220px;
+}
+
+input#userEmail:focus{
+  width: 220px;
+}
+
+input#userName:focus{
+  width: 220px;
+}
+
+input#userSurname:focus{
+  width: 220px;
+}
+*/
+
+a.checkText{
+  display: none;
+  color: darkred;
+}
+
+input#logout{
+  background-color: #f1f1f1;
+  border: none;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Raleway;
+}
+
+.myprofbtn{
+  background-image: url(Images/userPhoto.png);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+}
+
+.myprofdown {
+  position: relative;
+  display: inline-block;
+}
+
+.myprofdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.myprofdown-content a {
+  text-align: center;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: Raleway;
+  font-size: 20px;
+}
+
+.myprofdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+  opacity: 1;
+}
+
+.myprofdown:hover .myprofdown-content {
+  display: block;
+  left: -40px;
+}
+
+.myprofdown:hover .myprofbtn {
+  background-color: #ddd;
+  opacity: 0.5;
+  color: black;
+}
